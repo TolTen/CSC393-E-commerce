@@ -1,4 +1,4 @@
-# CS393 E-Commerce Frontend Project
+# CS393 E-Commerce Project
 
 This repository contains the frontend implementation of an e-commerce product catalog developed for the **CS393 – Backend Development** course.
 
