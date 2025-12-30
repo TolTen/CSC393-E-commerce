@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products</title>
+  <link rel="stylesheet" href="css/products.css" />
+  <script defer src="js/api.js"></script>
+  <script defer src="js/products.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="products.html" aria-label="Go to home">
+        <img class="logo" src="img/logo.png" alt="Logo" />
+      </a>
+
+      <div class="controls">
+        <label class="control">
+          <span>Categories</span>
+          <select id="categorySelect">
+            <option value="all">All</option>
+          </select>
+        </label>
+
+        <label class="control">
+          <span>Filtering</span>
+          <input id="filterInput" type="text" placeholder="Search..." />
+        </label>
+
+        <label class="control">
+          <span>Sort By</span>
+          <select id="sortSelect">
+            <option value="none">None</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </label>
+
+        <button id="retrieveBtn" class="btn">Retrieve results</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="status" class="status" aria-live="polite"></div>
+    <section id="grid" class="product-grid"></section>
+  </main>
+</body>
+</html>

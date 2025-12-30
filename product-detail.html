@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Detail</title>
+
+  <link rel="stylesheet" href="css/product-detail.css" />
+
+  <script defer src="js/api.js"></script>
+  <script defer src="js/product-detail.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="back" href="products.html">← Back</a>
+
+      <a class="brand" href="products.html" aria-label="Go to home">
+        <img class="logo" src="img/logo.png" alt="Logo" />
+        <span class="brand-text">Product Detail</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="status" class="status" aria-live="polite"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <section class="detail">
+      <div class="media">
+        <img id="productImage" class="image" alt="product" />
+      </div>
+
+      <div class="info">
+        <h2 id="title" class="title"></h2>
+
+        <div class="row">
+          <div id="rating" class="pill"></div>
+          <div id="ratingCount" class="pill muted"></div>
+        </div>
+
+        <p id="description" class="desc"></p>
+
+        <div class="row prices">
+          <div class="price">Price: <strong id="price"></strong></div>
+          <div class="price">Total Price: <strong id="totalPrice"></strong></div>
+        </div>
+
+        <div class="row actions">
+          <label class="qty">
+            Quantity
+            <div class="qty-wrap">
+              <button type="button" id="qtyMinus" class="qty-btn">−</button>
+              <input id="qtyInput" class="qty-input" type="number" min="1" value="1" />
+              <button type="button" id="qtyPlus" class="qty-btn">+</button>
+            </div>
+          </label>
+
+          <button id="addToCartBtn" class="btn">Add to Cart</button>
+        </div>
+
+        <div class="box">
+          <h3>Product Details</h3>
+          <div class="kv">
+            <div class="k">Brand</div><div id="brand" class="v"></div>
+            <div class="k">Weight</div><div id="weight" class="v"></div>
+            <div class="k">Dimensions</div><div id="dimensions" class="v"></div>
+            <div class="k">Warranty Information</div><div id="warranty" class="v"></div>
+            <div class="k">Shipping Information</div><div id="shipping" class="v"></div>
+            <div class="k">Availability Status</div><div id="availability" class="v"></div>
+            <div class="k">Return Policy</div><div id="returnPolicy" class="v"></div>
+            <div class="k">Minimum Order Quantity</div><div id="minOrderQty" class="v"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>Reviews</h3>
+          <div id="reviews" class="reviews"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
